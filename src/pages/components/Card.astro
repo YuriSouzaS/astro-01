@@ -1,0 +1,54 @@
+---
+import LayoutBase from "../layout/LayoutBase.astro";
+import { Image } from "astro:assets";
+
+const peoples = [
+    {
+        name: "Ada lovelace",
+        description: "Matemática e escritora inglesa",
+        image: "/public/Ada.jpg"
+    },
+    {
+        name:"Alan turing",
+        description: "Matemático, cientista da computação, lógico, critoanalista",
+        image: "/public/alan.webp"
+    }
+]
+---
+
+
+<div class="row">
+    <div class="col">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src={peoples[0]['image']} class="img-fluid rounded-start" alt={peoples[0]['name']}>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{peoples[0]['name']}</h5>
+                  <p class="card-text">{peoples[0]['description']}</p>
+                  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card mb-3" style="max-width: 540px;">
+            <div class="row g-0">
+              <div class="col-md-4">
+                <img src={peoples[1]['image']} class="img-fluid rounded-start" alt={peoples[1]['name']}>
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{peoples[1]['name']}</h5>
+                  <p class="card-text">{peoples[1]['description']}</p>
+                  <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                </div>
+              </div>
+            </div>
+        </div>
+    </div>
+    
+</div>
